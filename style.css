@@ -1,8 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-   margin:0;
-   padding: 0;
-   font-family:"Poppins", sans-serif;
-   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .container{
@@ -11,13 +14,13 @@ min-height: 100vh;
 background:linear-gradient(135deg, #153677 , #4e085f);
 padding: 10px;
 }
-.to-do-app{
-    width:100%;
-    max-width: 540px;
-    background-color: #fff;
-    margin: 100px auto 20px;
-    padding: 10px 30px 70px;
-    border-radius: 10px;
+.to-do-app {
+  width: 90%;
+  max-width: 540px;
+  background-color: #fff;
+  margin: 60px auto 20px;
+  padding: 20px 20px 50px;
+  border-radius: 10px;
 }
 .to-do-app h1{
     color: #002765;
@@ -30,39 +33,43 @@ padding: 10px;
     height: auto;
     margin-left: 10px;
 }
-.row{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #edeef0;
-    border-radius: 30px;
-    padding: 20px;
-    margin-bottom: 25px;
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #edeef0;
+  border-radius: 30px;
+  padding: 12px;
+  margin-bottom: 25px;
 }
-input{
-    flex:1;
-    border: none;
-    outline:none;
-    background-color: transparent;
-    padding:10px;
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 16px;
+  min-width: 0;
 }
-button{
-    border: none;
-    outline:none;
-    padding:16px 50px;
-    background:#ff5945;
-    color:#fff;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius:40px ;
+button {
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 40px;
+  white-space: nowrap;
 }
-ul li{
-    list-style:none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position:relative;
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 40px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  word-wrap: break-word;
 }
 ul li:before{
     content: '';
@@ -97,4 +104,30 @@ ul li span{
 }
 ul li span:hover{
     background: #edeef0;
+}
+@media (max-width: 600px) {
+  .to-do-app {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  ul li span {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
 }
